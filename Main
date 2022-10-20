@@ -1,0 +1,58 @@
+package de.hft_stuttgart.ip1;
+
+public class SelfPrint {
+
+    public static void main(String[] args) {
+        System.out.print(getMyText());
+    }
+
+    private static String programText [] = {
+    
+"package de.hft_stuttgart.ip1;",
+"",
+"public class SelfPrint {",
+"",
+"    public static void main(String[] args) {",
+"        System.out.print(getMyText());",
+"    }",
+"",
+"    private static String programText [] = {",
+"",
+"",
+"    };",
+"",
+"    private static String getMyText(){",
+"        char q = 34;",
+"        char br = 10;",
+"        StringBuilder code = new StringBuilder();",
+"        for(int i = 0; i < 9; i++) {",
+"            code.append(programText[i]).append(br);",
+"        }",
+"        for(int i = 0; i < programText.length; i++) {",
+"            code.append(q).append(programText[i]).append(q).append(',').append(br);",
+"        }",
+"        for(int i = 9; i < programText.length; i++) {",
+"            code.append(programText[i]).append(br);",
+"        }",
+"        return code.toString();",
+"    }",
+"}",
+
+    };
+
+    private static String getMyText(){
+        char q = 34;
+        char br = 10;
+        StringBuilder code = new StringBuilder();
+        for(int i = 0; i < 19; i++) {
+            code.append(programText[i]).append(br);
+        }
+        for(int i = 0; i < programText.length; i++) {
+            code.append(q).append(programText[i]).append(q).append(',').append(br);
+        }
+        for(int i = 19; i < programText.length; i++) {
+            code.append(programText[i]).append(br);
+        }
+        return code.toString();
+    }
+}
